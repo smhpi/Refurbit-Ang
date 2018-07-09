@@ -79,18 +79,14 @@ nav ul li a:active{
 nav::after{
     clear: both;
     display: block;
-    position: static;
     
 }
 header::before{
     clear: both;
 }
-header{
-    
-    padding-top: 17px;
+header{ 
+    padding-top: 5.6rem;
     padding-bottom: 5px;
-    position: relative;
-    top: 70px;
 }
 header::after{
     

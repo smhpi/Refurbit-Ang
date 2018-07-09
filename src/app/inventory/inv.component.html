@@ -1,16 +1,113 @@
 <section>
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span12">
-            <div>
-                Integrated Inventory 
+        <div class="product">
+            <header>
+                <div class="title-bar">
+                    <span class="title-bar_title">
+                        <h1 class="ui-titile-bar_title">
+                            Products
+                        </h1>
+                    </span>
+                </div>
+            </header>
+            <div class="layout">
+                <div class="layout_section">
+                    <div class="layout_item">
+                        <div data-context="filterer">
+                            <div class="next-tab">
+                                <ul>
+                                    <li class="next-tab-a" role="presentation">
+                                        <a  href="#">All</a>
+                                    </li>
+                                    <li class="next-tab-a" role="presentation">
+                                        <a href="#"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="next-card">
+                                <div class="obj-filter">
+                                    <div class="input-wrapper">
+                                        <label class="label"></label>
+                                        <div class="next-field-wraper">
+                                            <button class="ui-button">
+                                                    <span class="no-wrap">
+                                                            filter 
+                                                    </span>
+                                            </button>  
+                                            <form class="next-form">
+                                                <div class="next-input">
+                                                        <label class="next-label helper--visually-hidden" for="query">Query</label>
+                                                    <span class="next-input_addon">
+                                                            <svg aria-hidden="true" focusable="false" class="next-icon"> 
+                                                                <use xlink:href="#next-search-reverse">
+                                                                        <svg id="next-search-reverse" width="100%" height="100%">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                                <path d="M8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm9.707 4.293l-4.82-4.82C13.585 10.493 14 9.296 14 8c0-3.313-2.687-6-6-6S2 4.687 2 8s2.687 6 6 6c1.296 0 2.492-.415 3.473-1.113l4.82 4.82c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414z">
+                                                                                </path>
+                                                                            </svg>
+                                                                        </svg>
+                                                                </use> 
+                                                            </svg>
+                                                    </span>
+                                                    <input type="text" name="query" id="query" value="" placeholder="Search products" bind="query" class="next-input next-input--invisible">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="products-results" data-tg-refredh="products">
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                    <td class="select">
+                                                        <div class="next-input-wrapper">
+                                                          
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                      <a class="aspect-ratio aspect-ratio--square aspect-ratio--square--50 aspect-ratio--interactive" href="/admin/products/8773547410">
+                                                          <img title="Acer V193W 19-inch LCD Monitor, 16:10 Aspect Ratio, 1440x900, VGA" class="aspect-ratio__content" src="//cdn.shopify.com/s/files/1/1628/9377/products/side_73df476b-9abc-4a05-924a-65624d3e2b3b_small.jpg?v=1516820269">
+                                                        </a>                             
+                                                    </td>
+                                                    <td class="name">
+                                                        <div class="ui-stack ui-stack--wrap">
+                                                            <div class="ui-stack-item">
+                                                                <a href="/admin/products/8773547410" data-nested-link-target="true">Acer V193W 19-inch LCD Monitor, 16:10 Aspect Ratio, 1440x900, VGA</a>
+                                                            </div>
+                                                        </div>                                
+                                                        <div>  <span class="x-small type--subdued">Unavailable on Refurb inventory</span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="total">
+                                                        <p>
+                                                        <span class="highlight-warning">
+                                                            0
+                                                        </span>
+                                                        in stock
+                                                       </p>
+                                                    </td>
+                                                    <td class="type">
+                                                      <p>Monitors</p>
+                                                    </td>
+                                                    <td class="vendor">
+                                                      <p>Acer</p>
+                                                    </td>
+                                                  </tr>
+                                    </tbody>
+                                </table>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <li>Shopify</li>
-                <li>BestBuy</li>
-                <li>NewEgg</li>
-                <li>Others</li>
-            </ul>
         </div>
     </div>
 </div>

@@ -1,3 +1,223 @@
 section::before{
     clear: both;
 }
+
+.ui-titile-bar_title{
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+.layout_section{
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(63,63,68,0.05), 0 1px 3px 0 rgba(63,63,68,0.15);
+}
+
+.next-tab ul{
+    list-style: none;
+    overflow: visible;
+    border-radius: 3px 3px 0 0;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 1.6rem 0;
+    margin-left: 1.6rem;
+    border-right: 0;
+    border-bottom: 3px solid transparent;
+    margin-right: 1.6rem;
+    padding: 1.6rem 0;
+}
+
+
+.next-tab li {
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    list-style: none;
+}
+
+.next-tab_list>li>.next-tab-a{
+    background-color: transparent;
+    border-bottom-color: #5c6ac4;
+    color: #212b36;
+    border-top-left-radius: 0;
+    margin-left: 1.6rem;
+    border-right: 0;
+    border-bottom: 3px solid transparent;
+    margin-right: 1.6rem;
+    padding: 1.6rem 0;
+}
+
+.next-card{
+    padding: 20px;
+    border-radius: 0 0 3px 3px;
+}
+
+.obj-filter{
+    margin-bottom: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.next-field-wraper{
+    display: flex;
+}
+
+.ui-button, .next-form{
+    display: inline-block;
+    height: auto;
+    cursor: pointer;
+    text-transform: none;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    padding: 0.1rem 1.2rem;
+    line-height: 1.6rem;
+    border: 1px solid #c4cdd5;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition-duration: 200ms;
+    -webkit-tap-highlight-color: transparent;
+    background-color: #ffffff; 
+    position: relative;
+    display: inline-block;
+}
+
+.no-wrap {
+    white-space: nowrap !important;
+}
+
+.next-form{
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    left: -1px;
+    box-shadow: inset 0 1px 0 0 rgba(63,63,68,0.05);
+    border-color: #c4cdd5;
+}
+
+label{
+    color: #212b36;
+}
+.next-label{
+    min-width: 0;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2rem;
+    text-transform: initial;
+    letter-spacing: initial;
+    cursor: pointer;
+}
+
+.helper--visually-hidden {
+    position: absolute !important;
+    top: 0;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden !important;
+}
+
+.next-input{
+
+    
+    border: 0;
+    padding: auto 0;
+    transition-property: background, border, box-shadow, -webkit-box-shadow;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.35, 1);
+    transition-duration: 200ms;
+    position: relative;
+    border-radius: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    margin: 0 -1px 0 0;
+    
+    max-width: 100%;
+    min-width: 0;
+
+}
+
+.next-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-right: 0.4rem;
+}
+
+.next-input--stylized .next-input--invisible {
+    display: inline-block;
+    max-width: auto;
+    min-width: 75px;
+    vertical-align: baseline;
+    width: auto;
+    height: auto;
+    padding: 1px;
+    margin: 0;
+    border: 1px solid #95a7b7;
+    border-radius: 0;
+    border-style: inset;
+    color: black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+    color: #31373d;
+}
+button, input {
+    overflow: visible;
+}
+.next-input_addon{
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+    white-space: nowrap;
+    color: #95a7b7;
+    float: left;
+    position: relative;
+}
