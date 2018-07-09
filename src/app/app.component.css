@@ -1,0 +1,97 @@
+nav {
+    
+    background: none;
+    border: none;
+    border-bottom: 1px solid #c20000;
+    background: linear-gradient(to bottom,#ffffff,#eeeeee);
+    position: fixed;
+    width: 100%; 
+
+}
+
+nav img{
+    margin: auto 0;
+    padding: 10px;
+    width: 180px;
+    }
+@media all and (max-width:600px){
+    nav img{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    }
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+@media all and (min-width:920px){
+    nav ul{
+        flex-direction: row;
+        justify-content: space-around;
+        float: right;
+        width: 50%;
+    }
+}
+nav ul li{
+
+    float: left;
+    
+}
+nav ul li a{
+
+    padding: 25px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: #444;
+    font-size: 1em;
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+
+}
+nav ul li a:hover{
+
+    color: rgb(184, 0, 0);
+    background-color: rgba(230, 230, 230, 0.5);
+
+}
+
+nav ul li a:active{
+
+    transition: box-shadow 0.1s linear;
+    border-bottom: 3px solid rgb(184, 0, 0);
+
+}
+@media all and (min-width: 920px){
+    nav{
+        flex-direction: row;
+    }
+}
+nav::after{
+    clear: both;
+    display: block;
+    position: static;
+    
+}
+header::before{
+    clear: both;
+}
+header{
+    
+    padding-top: 17px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 70px;
+}
+header::after{
+    
+}

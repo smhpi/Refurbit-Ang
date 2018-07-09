@@ -1,0 +1,27 @@
+{
+  "name": "refurbit-ang",
+  "description": "Inventory managment for RefurbIT.com",
+  "main": "index.html",
+  "authors": [
+    "Hosen Poursaeid <poursaeid@outlook.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "refurbit",
+    "inventory",
+    "angular",
+    "integrated",
+    "marketplace"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-css": "^8.0.0"
+  }
+}
