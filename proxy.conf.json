@@ -1,0 +1,10 @@
+{
+  "/inventory": {
+    "target": "https://marketplace.bestbuy.ca/api/offers?api_key=fa4ab3b8-4421-4a9a-9e2d-6c087e7bc9ce&max=100",
+    "secure": false,
+    "pathRewrite": {
+    "^/inventory": ""
+  },
+    "changeOrigin": true
+  }
+}

@@ -26,7 +26,7 @@ const appRoutes: Routes = [
     )
   ],
   providers: [
-    {provide: BrowserXhr, useClass:CustExtBrowserXhr}
+    {provide: BrowserXhr, useClass: CustExtBrowserXhr}
   ],
   bootstrap: [AppComponent]
 })
