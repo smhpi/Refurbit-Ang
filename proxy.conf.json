@@ -1,9 +1,18 @@
 {
-  "/inventory": {
+  "/bestbuyapi": {
     "target": "https://marketplace.bestbuy.ca/api/offers?api_key=fa4ab3b8-4421-4a9a-9e2d-6c087e7bc9ce&max=100",
     "secure": false,
     "pathRewrite": {
-    "^/inventory": ""
+    "^/bestbuyapi": ""
+  },
+    "changeOrigin": true
+  },
+
+  "/shopifyapi": {
+    "target": "https://7a9a0cd109e13c767602bf9901d348ef:fc2672d3306489f1474422f3c7b7c75e@refurbitcdn.myshopify.com/admin/products.json",
+    "secure": false,
+    "pathRewrite": {
+    "^/shopifyapi": ""
   },
     "changeOrigin": true
   }

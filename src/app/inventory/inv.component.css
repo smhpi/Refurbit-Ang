@@ -5,7 +5,7 @@ section::before{
 .ui-titile-bar_title{
     font-weight: 600;
     font-size: 1.5rem;
-
+    padding: 20px 0;
 }
 
 .layout_section{

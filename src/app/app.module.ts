@@ -1,12 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes, Router } from '@angular/router';
-import { BrowserXhr } from '@angular/http';
 
-import {CustExtBrowserXhr} from './cust-ext-browser-xhr';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes, Router } from '@angular/router';
+
 import { AppComponent } from './app.component';
 import { InvComponent } from './inventory/inv.component';
+import { BbApi } from './inventory/bestbuy.service';
 
 const appRoutes: Routes = [
   { path: 'inventory', component: InvComponent },
@@ -15,19 +16,18 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    InvComponent
+    InvComponent,
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true}
     )
   ],
-  providers: [
-    {provide: BrowserXhr, useClass: CustExtBrowserXhr}
-  ],
+  providers: [ BbApi ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

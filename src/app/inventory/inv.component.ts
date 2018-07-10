@@ -1,7 +1,6 @@
-
 import { Component } from '@angular/core';
-import { Http, Response } from '@angular/http';
-
+import { BbApi } from './bestbuy.service';
+import { Observable } from 'rxjs/Rx';
 
 @Component({
     templateUrl: './inv.component.html',
@@ -9,25 +8,24 @@ import { Http, Response } from '@angular/http';
 })
 
 export class InvComponent {
-    title = 'app works!';
-    private apiUrl = 'https://marketplace.bestbuy.ca/api/offers?api_key=fa4ab3b8-4421-4a9a-9e2d-6c087e7bc9ce&max=100';
-    data: any = {};
+    
+    public products$ ;
+    constructor (private _bbService: BbApi){}
 
-    constructor(private http: Http){
-        console.log('Hello fellow  User');
-        this.getContacts();
-        this.getData();
-    }
+    ngOnInit() {
+        this.products$ = this._bbService.getBbApi();
+      }
+     
+      getBbApi() {
+       this._bbService.getBbApi().subscribe(
+          (products$) => { this.products$ = products$},
+          err => console.error(err),
+          () => console.log(this.products$.offers[0].product_title,)
+        );
+        
+      }
+    
+    
+    
 
-    getData() {
-        return this.http.get(this.apiUrl);
-    }
-
-    getContacts() {
-        this.getData().subscribe(data => {
-            console.log(data);
-            this.data = data;
-        });
-    }
 }
-

@@ -62,7 +62,14 @@
                                 <div id="bestbuy" class="table-wrapper">
                                     <table>
                                         <thead>
-
+                                            <tr>
+                                                <th class="select"></th>
+                                                <th class="image"></th>
+                                                <th class="title">Product</th>
+                                                <th class="inventory">Inventory</th>
+                                                <th class="product-type">Type</th>
+                                                <th class="vendor">Vendor</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
@@ -102,8 +109,18 @@
                                                     <p>Acer</p>
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td>
+                                                   
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
+                                    <ul>
+                                            <li>
+                                                {{ products$ }}
+                                            </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -113,25 +130,3 @@
         </div>
     </div>
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $("#products-results").append("<table></table>");
-        $.ajax({
-            type: "GET",
-            url: "https://marketplace.bestbuy.ca/api/offers?api_key=fa4ab3b8-4421-4a9a-9e2d-6c087e7bc9ce&max=100",
-            dataType: 'xml',
-            success: function (xml) {
-                $(xml).find('offer').each(function () {
-                    var bTitle = $(this).find('product_title').text();
-                    var bSKU = $(this).find('shop_sku').text();
-                    var bquantity = $(this).find('quantity').text();
-                    $("<tr></tr>").html("<td>" + bSKU + " </td><td> " + bTitle + " </td><td> " + bquantity + "</td>").appendTo("#products-results table");
-                });
-            },
-            error: function () {
-                alert("error");
-            }
-        });
-    });
-</script>
