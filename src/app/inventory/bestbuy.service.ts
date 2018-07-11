@@ -9,17 +9,17 @@ const httpOptions = {
 };
 
 @Injectable()
-export class BbApi{
+export class BbApi {
 
-    constructor(private http:HttpClient){}
+    constructor(private http: HttpClient) {}
 
-    getBbApi(){
+    getBbApi() {
 
         return this.http.get('/bestbuyapi');
 
     }
 
-    getShopifyApi(){
+    getShopifyApi() {
         return Observable.forkJoin(
             this.http.get('/shopifyapi')
         );

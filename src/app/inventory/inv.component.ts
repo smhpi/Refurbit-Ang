@@ -8,24 +8,16 @@ import { Observable } from 'rxjs/Rx';
 })
 
 export class InvComponent {
-    
-    public products$ ;
-    constructor (private _bbService: BbApi){}
-
+    public products ;
+    constructor (private _bbService: BbApi) {}
     ngOnInit() {
-        this.products$ = this._bbService.getBbApi();
+        this.getBbApi();
       }
-     
       getBbApi() {
        this._bbService.getBbApi().subscribe(
-          (products$) => { this.products$ = products$},
+          (products) => { this.products = products; },
           err => console.error(err),
-          () => console.log(this.products$.offers[0].product_title,)
+          () => console.log(this.products)
         );
-        
       }
-    
-    
-    
-
 }
