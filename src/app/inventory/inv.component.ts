@@ -15,9 +15,18 @@ export class InvComponent {
       }
       getBbApi() {
        this._bbService.getBbApi().subscribe(
-          (products) => { this.products = products; },
+          (data) => { this.products = data;},
           err => console.error(err),
-          () => console.log(this.products)
+          () => { let offers = this.products;
+                
+                    for (var i=0; i<offers.length; i++){
+                        document.getElementById("bb").innerHTML = offers.offers[i];
+                        console.log(offers.offers[i]);
+                    }
+                    
+                }
         );
       }
+      
+      
 }

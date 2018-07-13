@@ -18,10 +18,11 @@ export class BbApi {
         return this.http.get('/bestbuyapi');
 
     }
-
+    
     getShopifyApi() {
         return Observable.forkJoin(
             this.http.get('/shopifyapi')
         );
     }
+    
 }
