@@ -9,15 +9,9 @@ const httpOptions = {
 };
 
 @Injectable()
-export class BbApi {
+export class ShopifyApi {
 
     constructor(private http: HttpClient) {}
-
-    getBbApi() {
-
-        return this.http.get('/bestbuyapi');
-
-    }
 
     getShopifyApi() {
 

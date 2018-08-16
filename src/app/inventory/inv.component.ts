@@ -8,25 +8,44 @@ import { Observable } from 'rxjs/Rx';
 })
 
 export class InvComponent {
-    public products ;
+    public productsBb ;
+    public productShopify;
+
     constructor (private _bbService: BbApi) {}
+
     ngOnInit() {
-        this.getBbApi();
-      }
-      getBbApi() {
+       // this.getBbApi();
+        this.getShopifyApi();
+    }
+
+  /*  getBbApi() {
        this._bbService.getBbApi().subscribe(
-          (data) => { this.products = data;},
-          err => console.error(err),
-          () => { let offers = this.products;
-                
-                    for (var i=0; i<offers.length; i++){
-                        document.getElementById("bb").innerHTML = offers.offers[i];
-                        console.log(offers.offers[i]);
-                    }
-                    
-                }
+            (data) => { 
+                this.productsBb = data;
+                let offers = this.productsBb.offers;
+                offers.map(function (product) {
+                    return {
+                        product: product };
+                  })
+                console.log(offers)
+            },
+            err => console.error(err),
+            () => console.log(this.productsBb)
         );
-      }
+    }
+*/
+    getShopifyApi(){
+        this._bbService.getShopifyApi().subscribe(
+            (data) => { 
+                this.productShopify = data;
+                let products = this.productShopify;
+
+                console.log(products)
+            },
+            err => console.error(err),
+            () => console.log(this.productShopify)
+        );
+     }
       
       
 }

@@ -35,24 +35,7 @@
                                                         filter
                                                     </span>
                                                 </button>
-                                                <form class="next-form">
-                                                    <div class="next-input">
-                                                        <label class="next-label helper--visually-hidden" for="query">Query</label>
-                                                        <span class="next-input_addon">
-                                                            <svg aria-hidden="true" focusable="false" class="next-icon">
-                                                                <use xlink:href="#next-search-reverse">
-                                                                    <svg id="next-search-reverse" width="100%" height="100%">
-                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                                                            <path d="M8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm9.707 4.293l-4.82-4.82C13.585 10.493 14 9.296 14 8c0-3.313-2.687-6-6-6S2 4.687 2 8s2.687 6 6 6c1.296 0 2.492-.415 3.473-1.113l4.82 4.82c.195.195.45.293.707.293s.512-.098.707-.293c.39-.39.39-1.023 0-1.414z">
-                                                                            </path>
-                                                                        </svg>
-                                                                    </svg>
-                                                                </use>
-                                                            </svg>
-                                                        </span>
-                                                        <input type="text" name="query" id="query" value="" placeholder="Search products" bind="query" class="next-input next-input--invisible">
-                                                    </div>
-                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
@@ -68,15 +51,17 @@
                                                 <th class="title">Product</th>
                                                 <th class="inventory">Inventory</th>
                                                 <th class="product-type">Type</th>
-                                                <th class="vendor">Vendor</th>
+                                                <th class="vendor">SKU</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            <tr *ngFor="let offer of this.products.offers"> 
                                                 
                                                 <td class="select">
+                                                       
                                                     <div class="next-input-wrapper">
-
+                                                       
+                                                           
                                                     </div>
                                                 </td>
                                                 <td>
@@ -87,26 +72,28 @@
                                                 <td class="name" >
                                                     <div class="ui-stack ui-stack--wrap">
                                                         <div class="ui-stack-item">
-                                                            <a href="/admin/products/8773547410" data-nested-link-target="true"> </a>
+
+                                                            <a href="/admin/products/8773547410" data-nested-link-target="true"> 
+                                                                {{offer.product_title}}
+                                                            </a>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <span class="x-small type--subdued" >Unavailable on Refurb inventory</span>
-                                                    </div>
+                                                    <div></div>
+                                                         
                                                 </td>
                                                 <td class="total">
                                                     <p>
                                                         <span class="highlight-warning" >
                                                            
                                                         </span>
-                                                        in stock
+                                                        {{offer.quantity}}
                                                     </p>
                                                 </td>
                                                 <td class="type">
-                                                    <p>Monitors</p>
+                                                    <p>{{offer.category_label}}</p>
                                                 </td>
                                                 <td class="vendor">
-                                                    <p>Acer</p>
+                                                    <p>{{offer.shop_sku}}</p>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -114,10 +101,16 @@
                                                    
                                                 </td>
                                             </tr>
+                                            <tr>
+                                                <td >
+                 
+
+                                                </td>
+                                            </tr>
+
                                         </tbody>
                                     </table>
                                     <div id="bb">
-
                                     </div>
                                 </div>
                             </div>
