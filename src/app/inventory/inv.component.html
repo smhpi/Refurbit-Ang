@@ -45,7 +45,7 @@
                                 <div id="bestbuy" class="table-wrapper">
                                     <table>
                                         <thead>
-                                            <tr>
+                                            <tr style="text-align: center;">
                                                 <th class="select"></th>
                                                 <th class="image"></th>
                                                 <th class="title">Product</th>
@@ -55,56 +55,26 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr *ngFor="let offer of this.products.offers"> 
+                                            <tr *ngFor="let offer of this.productShopify.products"> 
                                                 
                                                 <td class="select">
-                                                       
-                                                    <div class="next-input-wrapper">
-                                                       
-                                                           
-                                                    </div>
                                                 </td>
-                                                <td>
-                                                    <a class="aspect-ratio aspect-ratio--square aspect-ratio--square--50 aspect-ratio--interactive" href="/admin/products/8773547410">
-                                                        <img title="Acer V193W 19-inch LCD Monitor, 16:10 Aspect Ratio, 1440x900, VGA" class="aspect-ratio__content" src="//cdn.shopify.com/s/files/1/1628/9377/products/side_73df476b-9abc-4a05-924a-65624d3e2b3b_small.jpg?v=1516820269">
-                                                    </a>
+                                                <td class="image">
                                                 </td>
                                                 <td class="name" >
-                                                    <div class="ui-stack ui-stack--wrap">
-                                                        <div class="ui-stack-item">
-
-                                                            <a href="/admin/products/8773547410" data-nested-link-target="true"> 
-                                                                {{offer.product_title}}
-                                                            </a>
-                                                        </div>
-                                                    </div>
-                                                    <div></div>
-                                                         
+                                                    <img title={offer.image.alt} class="aspect-ratio__content" style="max-width:10% ;"src={{offer.image.src}}>
+                                                    <a href="#" data-nested-link-target="true"> 
+                                                        {{offer.title}}
+                                                    </a>  
                                                 </td>
                                                 <td class="total">
-                                                    <p>
-                                                        <span class="highlight-warning" >
-                                                           
-                                                        </span>
-                                                        {{offer.quantity}}
-                                                    </p>
+                                                    {{offer.variants[0].inventory_quantity}}
                                                 </td>
                                                 <td class="type">
-                                                    <p>{{offer.category_label}}</p>
+                                                    {{offer.product_type}}
                                                 </td>
                                                 <td class="vendor">
-                                                    <p>{{offer.shop_sku}}</p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td >
-                 
-
+                                                    {{offer.variants[0].sku}}
                                                 </td>
                                             </tr>
 
